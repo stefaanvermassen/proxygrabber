@@ -12,7 +12,7 @@ fi
 if cat ~/.curlrc > /dev/null 2>&1;then
         rm ~/.curlrc
 fi
-for i in {1..1}
+for i in {1..50}
 do
 	curl -s http://www.hidemyass.com/proxy-list/$i > "$TEMPDIR/$i"
 	sed -n '
