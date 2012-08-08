@@ -6,11 +6,10 @@
 TEMPDIR=`mktemp -d`
 trap "rm -rf $TEMPDIR" EXIT
 if cat ~/proxies.txt > /dev/null 2>&1;then
-#	echo "proxies.txt bestond al, maar wordt nu verwijderd"
+	echo "proxies.txt bestond al, maar wordt nu verwijderd"
 	rm ~/proxies.txt
 fi
 if cat ~/.curlrc > /dev/null 2>&1;then
-#       echo "proxies.txt bestond al, maar wordt nu verwijderd"
         rm ~/.curlrc
 fi
 for i in {1..1}
